@@ -1,0 +1,110 @@
+  
+  .LayoutHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 13px 20px;
+  }
+
+  .logo{
+    width: 35px;
+    height: 35px ;
+    z-index: 2;
+  }
+
+  .burger{
+    width: 40px;
+    height: 40px ;
+  }
+
+  .nav-links{
+    display: none
+  }
+
+  .navLink{
+    display: none
+  }
+
+  .headerButtons{
+    display: none;
+  }
+
+  .signUp{
+    display: none;
+  }
+
+  .logIn{
+    display: none;
+  }
+
+@media (min-width:768px) {
+  .burger{
+    display:none;
+  }
+  .nav-links{
+    display: flex;
+    gap:30px ;
+  }
+
+  .navLink{
+    display:block;
+    list-style-type: none; 
+    padding-left: 0;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: inter;
+  }
+
+  .headerButtons{
+    display: flex;
+    gap: 15px ;
+  }
+
+  .signUp{
+    background-color: #919191;
+    border-radius: 20px;
+    padding: 15px;
+    font-family: inter;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+    border: none;
+  }
+
+  .logIn{
+    background-color: #919191;
+    border-radius: 20px;
+    padding: 15px 42px;
+    font-family: inter;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+    border: none;
+  }
+
+}
+
+@media (min-width:1024px) {
+
+  .nav-links{
+    gap:40px ;
+  }
+
+  .headerButtons{
+    gap: 25px ;
+  }
+
+  .signUp{
+    padding: 19px;
+  }
+
+  .logIn{
+    padding: 19px 46px;
+  }
+
+}
