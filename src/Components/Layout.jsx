@@ -3,6 +3,7 @@ import './CSS/Layout.css'
 import Header from './Layout/Header';
 import { useEffect, useState } from 'react';
 import Menu from './Layout/Menu';
+import Footer from './Layout/Footer';
 
 
 function Layout() {
@@ -17,6 +18,7 @@ function Layout() {
     <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Header setMenuOpen={setMenuOpen} />
       <Outlet/>
+      <Footer />
     </main>
     </>
   )
