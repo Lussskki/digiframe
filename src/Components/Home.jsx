@@ -27,7 +27,7 @@ function Home() {
           <div className="offerItems">
             {components.offer.map((item, index) => (
                 <div key={index} className="offerItem">
-                  <MdOutlineDone style={{ width: "15px", height: "15px" }} />
+                  <MdOutlineDone className="homeCheckMark" />
                   <div className="offerItemName">{item}</div>
                 </div>
               ))}
@@ -76,14 +76,22 @@ function Home() {
     ]
     
     return (
-      <div className="slider-container">
-        <div className="slider">
-          {comp === "logo" ?
+      <div className={`slider-container ${comp != "logo" && 'slider-container2' }`}>
+        <div className={`slider ${comp != "logo" && 'offerSlider'} `}>
+          {comp == "logo" ?
             Array(10).fill(null).map((_, index) => {
               return(<Logo key={index} />)})
             :
-            offers.map((item, index) => {
-              return(<Offers key={index + 10} components={item} />)})
+            <>
+            {offers.map((item, index) => {
+              return(
+              <Offers key={index + 10} components={item} />
+            )})}
+            {offers.map((item, index) => {
+              return(
+              <Offers key={index + 10} components={item} />
+            )})}
+            </>
           }
         </div>
       </div>
@@ -94,7 +102,14 @@ function Home() {
     return (
       <div className={`homeAboutUs ${props.infoFor != "about" && 'homeAboutUs2'} `}>
         {props.infoFor == "about" ? (
+          <div className="homeAboutUsInfoBox" >
           <h1 className="homeAboutUsHead">about us</h1>
+          <p className="homeAboutUsInfo" >At Unified Digital Solutions, we empower small and medium 
+businesses with a full range of digital services — from 
+advertising and marketing to IT, design, and web
+ development. Our mission is to drive your growth
+ and help you succeed in the digital landscape.</p>
+          </div>
         ) : null}
         <div className={` homeAboutUsContent ${props.infoFor != "about" && 'homeAboutUsContent2'} `}>
           <div className="homeAboutUsContentInside" />

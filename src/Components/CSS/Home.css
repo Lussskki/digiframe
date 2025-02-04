@@ -70,6 +70,10 @@
   font-weight: normal;
 }
 
+.homeAboutUsInfo{
+    display: none;
+}
+
 .homeAboutUsContent{
     width: 100%;
     height: 100%;
@@ -88,12 +92,12 @@
 }
 
 .slider-container {
-    width: 100%;
     overflow: hidden;  
     position: relative;
     margin-top: 30px;
+    width: calc(100% + 32px);
+    margin-left: -16px;
   }
-  
   
   .slider {
     display: flex;
@@ -147,6 +151,11 @@
     gap:10px;
     margin-top: 14px;
   }
+  
+  .homeCheckMark{
+    width: 15px;
+    height: 15px;
+  }
 
   .offerItem{
     display: flex;
@@ -167,6 +176,7 @@
     text-overflow: ellipsis;
   }
 
+
   @keyframes slide {
     0% {
       transform: translateX(0);  
@@ -177,5 +187,197 @@
   }
 
   @media (min-width:768px) {
+    .homeHeaderHead {
+        font-size: 36px;
+      }
+
+    .homeAboutUsHead{
+        font-size: 34px;
+    }
+
+    .sliderText{
+        font-size: 33px;
+    }
+
+    .sliderLogo{
+        width: 45px;
+        height: 45px;
+      }
+
+    .offerBox{
+        height: 390px;
+    }
+
+    .offerName{
+        font-size: 18px;
+      }
+
+    .offerPrice{
+        font-size: 27px;
+        margin-top: 4px;
+    }
+
+    .offerItem{
+        font-size: 13px;
+    }
+
+    .homeCheckMark{
+        width: 20px;
+        height: 20px;
+    }
+  }
+
+  @media (min-width:1024px) {
+    .homeSection{
+        padding: 160px 32px 277px;
+    }
+
+    .homeHeader{
+        align-items: center;
+        height: 643px;
+        padding: 26px;
+    }
+
+    .homeHeaderHead{
+        font-size: 42px;
+    }
+
+    .homeHeaderSubhead{
+        display: none;
+    }
+
+    .homeHeaderBox {
+        width: 330px;
+        height: 330px;
+      }
+      
+      .homeHeaderBoxPosition1{
+          right:64px;
+          bottom:162px
+      }
+      
+      .homeHeaderBoxPosition2{
+          right:329px;
+          bottom:-60px
+      }
+
+      .homeAboutUs{
+        height: 544px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 160px;
+        padding: 26px 16px 16px 64px;
+    }
+    
+    .homeAboutUs2{
+        height: 811px;
+        padding: 43px 0px 178px 81px;
+    }
+    
+    .homeAboutUsInfoBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:57px;
+        margin-top: 27px;
+    }
+
+    .homeAboutUsInfo{
+        display: block;
+        font-size: 28px;
+        font-weight: normal;
+        color: #000;
+        width: 650px;
+    }
+
+    .homeAboutUsHead{
+      font-size: 42px;
+      font-weight: 600;
+    }
+    
+    .homeAboutUsContent{
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    
+    .homeAboutUsContent2{
+        margin-top:88px;
+    }
+    
+    .homeAboutUsContentInside{
+        width: 220px;
+        height: 502px;
+
+    }
+
+    .slider-container {
+        margin-top: 230px;
+        width: calc(100% + 64px);
+        margin-left: -32px;
+      }
+      .slider-container2 {
+        margin-top: 365px;
+      }
+
+      .offerSlider{
+        gap:104px
+    }
+
+    .sliderText{
+        font-size: 48px;
+    }
+
+    .sliderLogo{
+        width: 60px;
+        height: 60px;
+      }
+
+      .offerBox{
+        padding: 25px;
+      }
+
+      .offerName{
+        font-weight: bold;
+      }
+
+    .offerPrice{
+        font-size: 36px;
+        margin-top: 4px;
+        font-weight: 800;
+    }
+
   }
   
+  @media (min-width:1440px){
+    .homeAboutUsInfo{
+        display: block;
+        font-size: 32px;
+        font-weight: normal;
+        color: #000;
+        width: 900px;
+    }
+
+    .homeAboutUsHead{
+      font-size: 48px;
+      font-weight: 600;
+    }
+    
+    .homeAboutUsContent{
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+    
+    .homeAboutUsContent2{
+        margin-top:88px;
+    }
+    
+    .homeAboutUsContentInside{
+        width: 279px;
+        height: 502px;
+
+    }
+  }
