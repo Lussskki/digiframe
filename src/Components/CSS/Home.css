@@ -59,6 +59,10 @@
     background-color: rgba(234, 233, 252, 0.4);
 }
 
+.homeAboutUs2{
+    height: 373px;
+}
+
 .homeAboutUsHead{
   font-family: inter;
   font-size: 20px;
@@ -70,6 +74,10 @@
     width: 100%;
     height: 100%;
     margin-top: 56px;
+}
+
+.homeAboutUsContent2{
+    margin-top:88px;
 }
 
 .homeAboutUsContentInside{
@@ -112,7 +120,53 @@
     font-size: 18px;
     font-weight: 500;
   }
+
+  .offerBox{
+    padding: 18px 16px;
+    border: solid 1px rgba(176, 176, 176, 0.5);
+    border-radius: 20px;
+    margin-left: 20px;
+    height: 247px;
+  }
+
+  .offerName{
+    color: #121417;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .offerPrice{
+    color:#121417 ;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .offerItems{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top: 14px;
+  }
+
+  .offerItem{
+    display: flex;
+    gap: 7px;
+    font-size: 11px;
+    color: #121417;
+    font-weight: 300;
+    width: 100%;
+    align-items: flex-start; /* Ensures proper alignment */
+    overflow: hidden;
+}
+
+
+    
   
+  .offerItemName{
+    overflow: hidden;      /* Hide overflow text */
+    text-overflow: ellipsis;
+  }
+
   @keyframes slide {
     0% {
       transform: translateX(0);  
@@ -120,5 +174,8 @@
     100% {
       transform: translateX(-50%);  
     }
+  }
+
+  @media (min-width:768px) {
   }
   
