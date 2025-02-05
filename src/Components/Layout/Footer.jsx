@@ -1,7 +1,7 @@
 import { memo } from "react";
 import Logo from "../../../public/assets/footer/logo.png";
 import Facebook from "../../../public/assets/footer/facebook.png";
-// import Instagram from ".../../../public/assets/footer/.png"
+// import Instagram from ".../../../public/assets/footer/insta.png"
 import Youtube from "../../../public/assets/footer/youtube.png";
 import Twitter from "../../../public/assets/footer/twitter.png";
 import RespFacebook from "../../../public/assets/footer/resp-facebook.png";
@@ -11,6 +11,31 @@ import RespLinkdin from "../../../public/assets/footer/linkdin.png";
 import RespYoutube from "../../../public/assets/footer/resp-youtube.png";
 import { Link } from "react-router-dom";
 import "../CSS/Footer/Footer.css";
+
+const socialLinks = [
+  { img: Facebook, alt: "Facebook" },
+  // { img: Instagram, alt: "Instagram" },
+  { img: Youtube, alt: "Youtube" },
+  { img: Twitter, alt: "Twitter" },
+];
+
+const pages = [
+  "Home",
+  "Contact",
+  "Projects",
+  "About us",
+  "Portfolio",
+  "Blog",
+  "FAQs",
+];
+
+const responsiveSocialLinks = [
+  { img: RespFacebook, alt: "Facebook" },
+  { img: RespInstagram, alt: "Instagram" },
+  { img: RespTwitter, alt: "Twitter" },
+  { img: RespLinkdin, alt: "LinkedIn" },
+  { img: RespYoutube, alt: "Youtube" },
+];
 
 const Footer = memo(function Footer(props) {
   return (
@@ -26,35 +51,23 @@ const Footer = memo(function Footer(props) {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
           <div className="sites-links">
-            <img src={Facebook} alt="facebook" />
-            {/* <img src={Instagram} alt="instagram" /> */}
-            <img src={Youtube} alt="youtube" />
-            <img src={Twitter} alt="twitter" />
+            {socialLinks.map(({ img, alt }, index) => (
+              <img key={index} src={img} alt={alt} />
+            ))}
           </div>
         </article>
         <section className="pages-container">
           <article className="pages">
-            <div className="home">
-              <Link to="/home">Home</Link>
-            </div>
-            <div className="contact">
-              <Link to="/contact">Contact</Link>
-            </div>
-            <div className="projects">
-              <Link to="/projects">Projects</Link>
-            </div>
-            <div className="about-us">
-              <Link to="/about-us">About us</Link>
-            </div>
-            <div className="portfolio">
-              <Link to="/portfolio">Portfolio</Link>
-            </div>
-            <div className="blog">
-              <Link to="/blog">Blog</Link>
-            </div>
-            <div className="faqs">
-              <Link to="/faqs">FAQs</Link>
-            </div>
+            {pages.map((page, index) => (
+              <div
+                key={index}
+                className={page.toLowerCase().replace(/\s+/g, "-")}
+              >
+                <Link to={`/${page.toLowerCase().replace(/\s+/g, "-")}`}>
+                  {page}
+                </Link>
+              </div>
+            ))}
           </article>
           <article className="about">
             <div className="about-us">
@@ -95,11 +108,9 @@ const Footer = memo(function Footer(props) {
             <p className="resp-email">info@relume.io</p>
           </article>
           <article className="resp-sites-links-cont">
-            <img src={RespFacebook} alt="facebook" />
-            <img src={RespInstagram} alt="instagram" />
-            <img src={RespTwitter} alt="twitter" />
-            <img src={RespLinkdin} alt="linkedin" />
-            <img src={RespYoutube} alt="youtube" />
+            {responsiveSocialLinks.map(({ img, alt }, index) => (
+              <img key={index} src={img} alt={alt} />
+            ))}
           </article>
           <article className="resp-pages">
             <div className="resp-home">
