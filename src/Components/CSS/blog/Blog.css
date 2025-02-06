@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+}
+
+.blog-cart {
+  margin: 0 auto;
+  width: clamp(450px, 37vw, 524px);
+  height: 578px;
+}
+.blog-cart img {
+  width: 100%;
+  height: 329px;
+}
+.blog-cart .life-through {
+  margin: 30px 0px 0px 0px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #171a1f;
+}
+.blog-cart .blog-cart-info {
+  margin: 48px 0px 21px 0px;
+  width: clamp(395px, 31vw, 460px);
+  height: 87px;
+  font-size: clamp(20px, 2vw, 24px);
+  color: #171a1f;
+}
+.blog-cart .read-more {
+  font-weight: bold;
+  font-size: 24px;
+  color: #171a1f;
+  text-decoration: none;
+}
+
+.bloge-page-main-container {
+  width: 100%;
+}
+.bloge-page-main-container .bloge-page-main {
+  width: clamp(1024px, 84vw, 1600px);
+  margin: 137px auto;
+}
+.bloge-page-main-container .bloge-page-main .blog-head {
+  text-align: center;
+  font-weight: bold;
+  font-size: 64px;
+}
+.bloge-page-main-container .bloge-page-main .blog-cart-container {
+  margin-top: 249px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 100%;
+  row-gap: 179px;
+}
+.bloge-page-main-container .ai-photo {
+    margin: 174px auto;
+    width: clamp(355px, 85vw, 1302px);
+}
+.bloge-page-main-container .ai-photo img{
+    width: 100%;
+}
+
+@media screen and (max-width:1020px){
+  .blog-cart {
+    margin: 0 auto;
+    width: clamp(350px, 84vw, 524px);
+    height: 578px;
+  }
+  .blog-cart img{
+    width: 100%;
+    height: auto;
+  }
+  .blog-cart .life-through {
+    font-size: clamp(24px, 5vw, 26px);
+  }
+  .blog-cart .blog-cart-info {
+    width: clamp(350px, 72vw, 460px);
+    font-size: clamp(16px, 4vw, 24px);
+  }
+  .blog-cart .read-more {
+    font-size: clamp(21px, 4vw, 24px);
+  }
+  .bloge-page-main-container .bloge-page-main {
+    width: clamp(350px, 84vw, 1000px);
+  }
+  .bloge-page-main-container .bloge-page-main .blog-head {
+    font-size: clamp(32px, 10vw, 64px);
+  }
+  .bloge-page-main-container .bloge-page-main .blog-cart-container {
+    grid-template-columns: repeat(1, auto);
+    row-gap: 84px;
+  }
+}
+@media screen and (max-width:600px){
+  .bloge-page-main-container .bloge-page-main .blog-cart-container {
+    row-gap: 10px;
+  }
+}
