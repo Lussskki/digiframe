@@ -2,12 +2,12 @@ import express from 'express'
 import UserSchema from '../schemas/user_schema.js'
 import bcrypt from 'bcrypt'
 
-const userRouter = express.Router()
+const signupRouter = express.Router()
 
 const saltRounds = 10
 
 // Signup router
-userRouter.post('/', async (req, res) => {
+signupRouter.post('/', async (req, res) => {
   // console.log('Request data:', req.body)
   // Necessary information from the request body
   const { firstName, lastName, email, password } = req.body
@@ -50,4 +50,4 @@ userRouter.post('/', async (req, res) => {
   }
 })
 
-export default userRouter
+export default signupRouter
