@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "digiframe back-end",
   "main": "app.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
