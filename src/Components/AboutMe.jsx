@@ -7,18 +7,25 @@ const ProgressBar = ({ now, variant }) => {
   const getBarColor = (variant) => {
     switch (variant) {
       default:
-        return '#000';
+        return "#000";
     }
   };
 
   return (
-    <div style={{ width: '100%', backgroundColor: '#e0e0e0', borderRadius: '5px', height: '20px' }}>
+    <div
+      style={{
+        width: "100%",
+        backgroundColor: "#e0e0e0",
+        borderRadius: "5px",
+        height: "6px",
+      }}
+    >
       <div
         style={{
           width: `${now}%`,
           backgroundColor: getBarColor(variant),
-          height: '100%',
-          borderRadius: '5px',
+          height: "100%",
+          borderRadius: "5px",
         }}
       ></div>
     </div>
@@ -60,6 +67,7 @@ const AboutMe = () => {
         <p className="resume-info">Figma ipsum component variant main</p>
         <div className="experiens-and-educate">
           <div className="experiens">
+            <h2 className="experiens-head">Experiens</h2>
             {experienceData.map((item, index) => (
               <div key={index}>
                 <h2 className="web-design">{item.title}</h2>
@@ -68,6 +76,7 @@ const AboutMe = () => {
             ))}
           </div>
           <div className="educate">
+            <h2 className="educate-head">Educate</h2>
             {educationData.map((item, index) => (
               <div key={index}>
                 <h2 className="web-design">{item.title}</h2>
@@ -79,26 +88,37 @@ const AboutMe = () => {
       </article>
       <article className="skills-container">
         <h2 className="skills-title">Skills</h2>
-        <div className="skills-info">
-          <div className="skill">
-            <h3>Adobe Photoshop</h3>
-            <ProgressBar now={85} variant="success" />
-          </div>
-          <div className="skill">
-            <h3>HTML & CSS</h3>
-            <ProgressBar now={90} variant="info" />
-          </div>
-          <div className="skill">
-            <h3>Digital Marketing</h3>
-            <ProgressBar now={75} variant="warning" />
-          </div>
-          <div className="skill">
-            <h3>Video Editing</h3>
-            <ProgressBar now={80} variant="danger" />
-          </div>
-          <div className="skill">
-            <h3>Social Media</h3>
-            <ProgressBar now={70} variant="danger" />
+        <div className="skils">
+          <p className="skils-info-text">
+            Figma ipsum component variant main layer. Project thumbnail list
+            comment arrow. Figma ipsum component variant main layer. Project
+            thumbnail list comment arrow Figma ipsum component variant main
+            layer. Project thumbnail list comment arrow. Figma ipsum component
+            variant main layer. Project thumbnail list comment arrow. Figma
+            ipsum component variant main layer. Project thumbnail list comment
+            arrow. Figma ipsum component variant main layer.
+          </p>
+          <div className="skills-info">
+            <div className="skill">
+              <p className="skill-head">Adobe Photoshop</p>
+              <ProgressBar now={85} variant="success" />
+            </div>
+            <div className="skill">
+              <p className="skill-head">HTML & CSS</p>
+              <ProgressBar now={90} variant="info" />
+            </div>
+            <div className="skill">
+              <p className="skill-head">Digital Marketing</p>
+              <ProgressBar now={75} variant="warning" />
+            </div>
+            <div className="skill">
+              <p className="skill-head">Video Editing</p>
+              <ProgressBar now={80} variant="danger" />
+            </div>
+            <div className="skill">
+              <p className="skill-head">Social Media</p>
+              <ProgressBar now={70} variant="danger" />
+            </div>
           </div>
         </div>
       </article>
