@@ -1,10 +1,14 @@
+import "./CSS/Auth/LogIn.css";
+import Form from "./Form";
 
-function LogIn() {
+const LogIn = () => {
   return (
-    <div>
-      log In
-    </div>
-  )
-}
+    <div className="authForm-container">
+      <img width={"300px"} src="/assets/digiLogo.png" alt="digiframe logo" />
 
-export default LogIn
+      <Form />
+    </div>
+  );
+};
+
+export default LogIn;

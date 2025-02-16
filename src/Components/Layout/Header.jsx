@@ -12,7 +12,7 @@ const Header = memo(function Header(props){
     { key:2,path: "/services", name: "Services" },
     { key:3,path: "/meet-our-team", name: "Projects" },
     { key:4,path: "/blog", name: "Blog" },
-    { key:5,path: "/get-in-touch", name: "Contact" }
+    { key:5,path: "/get-in-touch", name: "Contact" },
   ];
 
   return (

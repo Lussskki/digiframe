@@ -3,6 +3,10 @@
   width: 100vw;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
 *{
   font-family: inter;
   padding: 0;
