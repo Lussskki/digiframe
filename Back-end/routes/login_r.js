@@ -39,7 +39,10 @@ loginRouter.post('/', async (req, res) => {
         if (!isPasswordValid) {
             return res.status(401).json({ message: `Invalid email or password` })
         }
-
+        
+        // Test user id 
+        // console.log('User ID after login:', user._id)
+        
         // Generate JWT token
         const token = generateToken(user._id)
 
