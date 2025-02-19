@@ -25,9 +25,15 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    // Not working
+    // emailServicePassword: { // Field to reset a forgotten password
+    //   type: String,
+    //   select: false,
+    //   required: true
+    // }
 })
 
 const UserSchema= mongoose.model('UserSchema', userSchema)
-
+ 
 export default UserSchema
