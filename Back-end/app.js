@@ -15,7 +15,7 @@ import blogRouter from './routes/blog_r.js'
 import getInTouchRouter from './routes/get_in_touch_r.js'
 import contactRouter from './routes/contact_r.js'
 import protectedRouter from './routes/protected_r.js'
-// Not working import forgetPassRouter from './routes/forget_password_r.js'
+import forgetPassRouter from './routes/forget_password_r.js'
 import settingsRouter from './routes/settings_r.js'
 
 
@@ -48,7 +48,7 @@ app.use('/blog', blogRouter)
 app.use('/get-in-touch', getInTouchRouter)
 app.use('/contact', contactRouter)
 app.use('/protected', protectedRouter)
-// Not working app.use('/api/', forgetPassRouter)
+app.use('/api/', forgetPassRouter) 
 app.use('/settings', settingsRouter)
 
 // Database connection
