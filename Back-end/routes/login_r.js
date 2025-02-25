@@ -4,7 +4,7 @@ import express from 'express'
 
 import bcrypt from 'bcrypt'
 
-import { generateToken } from '../utils/jwtUtils.js'
+import { generateAccessToken, generateRefreshToken } from '../utils/jwtUtils.js'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -17,7 +17,7 @@ const loginRouter = express.Router()
 
 // Login router
 loginRouter.post('/', async (req, res) => {
-    const { email, password } = req.body
+    const { email, password, rememberMe } = req.body
 
     // Check email and password
     if (!email || !password) {
@@ -44,10 +44,18 @@ loginRouter.post('/', async (req, res) => {
         // console.log('User ID after login:', user._id)
         
         // Generate JWT token
-        const token = generateToken(user._id)
+        const accessToken = generateAccessToken(user._id)
+        const refreshToken = generateRefreshToken(user._id, rememberMe)
+
+        res.cookie('refreshToken', refreshToken, {
+            httpOnly: true,
+            secure: true,
+            sameSite: 'Strict',
+            maxAge: rememberMe ? 7 * 24 * 60 * 60 * 1000: 24 * 60 * 60 * 1000 // 7 days or 1 day
+        })
 
         // Send token to client and log success message
-        return res.status(200).json({ message: `Login successful`, token })
+        return res.status(200).json({ message: `Login successful`, accessToken})
     } catch (err) {
         // Error handling
         return res.status(500).json({ message: `Error during login`, err })
