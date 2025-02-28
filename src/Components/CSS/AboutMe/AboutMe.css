@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.about-me-container {
+  width: 100%;
+}
+.about-me-container .about-cont {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(350px, 90vw, 1375px);
+  margin-top: 183px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: clamp(66px, 35vw, 230px);
+}
+.about-me-container .about-cont .about-me-head {
+  font-family: "Inter", serif;
+  font-size: clamp(32px, 4vw, 64px);
+  margin-left: clamp(5px, 2vw, 72px);
+  margin-right: 50px;
+  margin-bottom: clamp(5px, 4vw, 64px);
+}
+.about-me-container .about-cont .about-me-info {
+  font-family: "Inter", serif;
+  font-size: clamp(16px, 2vw, 24px);
+}
+.about-me-container .about-cont .about-me-icon img {
+  width: clamp(192px, 50vw, 603px);
+  height: clamp(223px, 50vw, 572px);
+}
+
+/* ==== RESUME CONTAINER ==== */
+
+.about-me-container .resume-container {
+  margin: 0 auto;
+  width: clamp(350px, 90vw, 1193px);
+}
+.about-me-container .resume-container .resume{
+  font-size: clamp(24px, 5vw, 42px);
+}
+.about-me-container .resume-container .resume-info{
+  font-size: clamp(16px, 3vw, 24px);
+  margin-bottom: clamp(30px, 10vw, 79px);
+}
+.about-me-container .resume-container .experiens-and-educate{
+  display: flex;
+  justify-content: space-between;
+  width: clamp(300px, 70vw, 833px);
+  margin-left: 27px;
+}
+.about-me-container .resume-container .experiens-and-educate .experiens{
+  margin-left: 13px;
+}
+.about-me-container .resume-container .experiens-and-educate .experiens-head{
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 300;
+  margin-left: -13px;
+  margin-bottom: clamp(19px, 8vw, 39px);
+}
+.about-me-container .resume-container .experiens-and-educate .educate-head{
+  font-size: clamp(20px, 4vw, 32px);
+  font-weight: 300;
+  margin-left: -13px;
+  margin-bottom: clamp(19px, 8vw, 39px);
+}
+.about-me-container .resume-container .experiens-and-educate .web-design{
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 400;
+}
+.about-me-container .resume-container .experiens-and-educate .ui-ux-design{
+  font-size: 16px;
+  margin-top: clamp(8px, 3vw, 18px);
+  margin-bottom: clamp(12px, 3vw, 21px);
+}
+
+/* ==== SKILLS CONTAINER ==== */
+
+.about-me-container .skills-container{
+  width: clamp(350px, 90vw, 1070px);
+  margin-top: 218px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: clamp(101px, 30vw, 274px);
+}
+.about-me-container .skills-container .skills-title{
+  font-size: clamp(24px, 4vw, 42px);
+  margin-left: 20px;
+}
+.about-me-container .skills-container .skils{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.about-me-container .skills-container .skils .skils-info-text{
+  width: 100%;
+  max-width: 617px;
+  margin-top: 41px;
+}
+.about-me-container .skills-container .skils .skills-info{
+  width: 100%;
+  max-width: 400px;
+}
+.about-me-container .skills-container .skils .skills-info .skill-head{
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+
+/* ==== RESPONSIVE ==== */
+
+@media screen and (max-width: 768px) {
+  .about-me-container .about-cont{
+    background-color: #EAE9FC;
+  }
+  .about-me-container .about-cont .about-me-icon {
+    border-radius: 20px;
+    margin: 39px 0px 24px 0px;
+  }
+  .about-me-container .about-cont .about-me-icon img {
+    border-radius: 20px;
+  }
+  .about-me-container .resume-container{
+    background-color: #EAE9FC;
+  }
+  .about-me-container .skills-container .skils{
+    display: block;
+  }
+  .about-me-container .skills-container .skils .skills-info{
+    margin-top: 101px;
+  }
+}

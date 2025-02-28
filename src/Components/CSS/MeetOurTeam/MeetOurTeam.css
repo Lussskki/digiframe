@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.meet-our-team {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.meet-our-team .meet-our-team-head {
+  text-align: center;
+  margin-top: 290px;
+  margin-top: clamp(20px, 15vw, 290px);
+}
+.meet-our-team .team-leader {
+  margin: 0 auto;
+  display: none;
+}
+.meet-our-team .team-members {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 20px;
+  row-gap: 54px;
+  margin-top: 330px;
+  margin-right: auto;
+  margin-bottom: 361px;
+  margin-left: auto;
+  width: clamp(350px, 90vw, 1285px);
+}
+.meet-our-team .team-card {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 100%;
+  max-width: 551px;
+}
+.meet-our-team .team-image {
+  width: clamp(140px, 18vw, 235px);
+  height: clamp(140px, 18vw, 235px);
+  border-radius: 50%;
+}
+.meet-our-team .team-content {
+  width: 100%;
+  max-width: 295px;
+}
+.meet-our-team .team-content .team-name {
+  font-size: clamp(24px, 2.5vw, 32px);
+  margin-bottom: 8px;
+}
+.meet-our-team .team-content .team-role {
+  font-size: clamp(20px, 2.5vw, 24px);
+  padding-right: 30px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid black;
+}
+.meet-our-team .team-icons {
+  margin-top: 19px;
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+}
+.meet-our-team .slide-container {
+  display: none;
+}
+
+.team-projects{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team-projects .team-project-slide{
+    width: 90%;
+    max-width: 1376px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 108px;
+}
+
+.team-projects .team-project-slide .project-image{
+    width: clamp(250px, 25vw, 348px);
+    border-radius: 20px;
+}
+.swiper-wrapper{
+    gap: 45px;
+}
+
+
+
+/* ==== Responsive ==== */
+
+
+@media screen and (max-width: 950px) {
+    .team-projects{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 870px) {
+  .meet-our-team .team-leader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 551px;
+    margin-top: 50px;
+    margin-bottom: 183px;
+  }
+  .meet-our-team .team-members {
+    display: none;
+  }
+  .meet-our-team .slide-container {
+    display: block;
+  }
+  .meet-our-team .slide-container .slide-team-member {
+    display: flex;
+    margin-left: 50px;
+    margin-bottom: 297px;
+  }
+  .meet-our-team .slide-container .slide-team-member .slide-team-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .meet-our-team .slide-team-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+  .meet-our-team .slide-team-content {
+    width: 226px;
+  }
+  .meet-our-team .slide-team-name {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .meet-our-team .slide-team-role {
+    font-size: 20px;
+    padding-right: 30px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid black;
+  }
+  .meet-our-team .slide-team-icons {
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+  }
+}
