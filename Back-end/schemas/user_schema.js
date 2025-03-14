@@ -25,8 +25,17 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    notifications: {
+        emailAlerts: { type: Boolean, default: false },  
+        pushNotifications: { type: Boolean, default: false },
+        weeklySummary: { type: Boolean, default: false },
+        securityAlerts: { type: Boolean, default: false },
+        receivePromotionalEmails: { type: Boolean, default: false } 
     }
-})
+    }, { timestamps: true },
+
+)
 
 const UserSchema= mongoose.model('UserSchema', userSchema)
  
