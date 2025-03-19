@@ -22,6 +22,7 @@ import refreshRouter from './routes/refresh_token_r.js'
 import logoutRouter from './routes/logout_r.js'
 import notificationRouter from './routes/notification_r.js'
 import subscriptionRoutes from './routes/subscription_r.js'
+import invoiceRouter from './routes/invoice_r.js'
 
 
 // Environment variables
@@ -60,6 +61,7 @@ app.use('/refresh', refreshRouter)
 app.use('/logout', logoutRouter)
 app.use('/settings/notifications', notificationRouter)
 app.use('/settings/billing/subscriptions', subscriptionRoutes)
+app.use('/settings/billing/invoices', invoiceRouter)
 
 // Database connection
 mongoose
